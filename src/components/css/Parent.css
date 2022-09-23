@@ -1,0 +1,199 @@
+.create{
+    width: 500px;
+    padding: 20px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: #6bbd99;
+    border-radius: 30px;
+}
+.create h5{
+    font-size: 35px;
+    color: rgb(41, 46, 39);
+
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.create form{
+    margin-bottom: 10px;
+}
+.create div label{
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(41, 46, 39);
+
+}
+.create input,.create select{
+    float: right;
+    width: 200px;
+
+}
+.create button{
+    background-color: #46a094;
+    border: none;
+    outline: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+
+}
+
+.list{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 10px;
+    height: 40px;
+    font-weight: 500;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: #46a094;
+    line-height: 40px;
+}
+.list .purchase{
+    flex: 1.5;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.list .category{
+    flex: 2;
+}
+.list .date{
+    flex: 1.5;
+}
+.list .cost{
+    flex: 1;
+}
+.list button{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s color;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.list button:hover{
+    color: rgb(179, 50, 50);
+}
+.h1{
+    font-size: 60px;
+}
+.statistics{
+    width: 45%;
+    padding-top: 100px;
+    float: right;
+}
+.statistics span{
+    display: inline-block;
+    width: 45%;
+}
+.statistics h6{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    color: #46a094;
+}
+.statistics p{
+    font-size: 45px;
+    color: rgb(41, 46, 39);
+}
+
+.chart{
+    width: 50%;
+    display: inline-block;
+}
+
+.createbudget{
+    width: 70%;
+    margin: auto;
+}
+.createbudget h1{
+    color: #46a094;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 100px;
+}
+.createbudget input{
+    width: 500px;
+    display: inline-block;
+    font-size: 30px;
+    height: 30px;
+    width: 100%;
+}
+.createbudget button{
+    color: white;
+    background-color: #46a094;
+    font-size: 20px;
+    width: 30%;
+    margin-top: 20px;
+    height: 30px;
+}
+
+
+
+
+@media screen and (max-width:1000px){
+    .createbudget h1{
+        font-size: 30px;
+}
+    .createbudget input{
+    font-size: 20px;
+}
+    .createbudget button{
+        font-size: 15px;
+    }
+
+
+}
+
+@media screen and (max-width:700px) {
+    .statistics h6{
+        font-size: 25px;
+    }
+    .statistics p{
+        font-size: 30px;
+    }
+
+    .create label{
+        font-size: 14px;
+    }
+    .create input,.create select{
+        width: 50%;
+    }
+    .create h5{
+        font-size: 28px;
+    }
+    .create{
+        width: 90%;
+    }
+    .list{
+        width: 90%;
+        font-size: 13px;
+    }
+    .list button{
+        font-size: 14px;
+    }
+    .statistics{
+        padding-top: 0;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .statistics span{
+        width: 45%;
+    }
+    .chart{
+        width: 100%;
+    }
+
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
