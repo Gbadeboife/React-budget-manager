@@ -4,10 +4,10 @@ import {PieChart,Pie,Tooltip} from 'recharts'
 
 function Chart({data}){
   return (
-      <PieChart width={300} height={300}>
+      <PieChart width={300} height={300} className="pie-chart">
         <Pie
           dataKey="value"
-          isAnimationActive={false}
+          isAnimationActive={true}
           data={data}
           cx="50%"
           cy="50%"

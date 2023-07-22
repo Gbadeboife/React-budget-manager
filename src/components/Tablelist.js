@@ -7,7 +7,7 @@ function Tablelist({purchase,category,date,cost,del,id}){
             <p className='category'>{category}</p>
             <p className='date'>{date}</p>
             <p className='cost'>${cost}</p>
-            <button onClick={()=>del(id)}>delete</button>
+            <button onClick={()=>del(id)}>DEL</button>
         </div>
     )
 }

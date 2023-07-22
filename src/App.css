@@ -1,1 +1,303 @@
+.create{
+    width: 50%;
+    padding:30px;
+    padding-bottom: 50px;
+    margin: auto;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    background-color: #6bbd99;
+    border-radius: 30px;
+    box-shadow: 0 10px 10px  #5f7a77b8;
+}
+.create div{
+    margin-bottom: 10px;
+}
+.create h5{
+    font-size: 35px;
+    color: rgb(55, 61, 53);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.create form{
+    margin-bottom: 10px;
+}
+.create div label{
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(55, 61, 53);
+
+}
+.create input,.create select{
+    float: right;
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 5px;
+    border: none;
+    background-color: whitesmoke;
+}
+.create input{
+    padding-left: 10px;
+}
+.create button{
+    background-color: #46a094;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    float: right;
+    transition: 0.4s;
+} 
+.create button:hover{
+    background-color: #2abeaa;
+    box-shadow: 0 3px 3px #485d56a9;
+}
+.parent{
+    width: 80%;
+    margin: auto;
+}
+
+.list{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 10px;
+    height: 40px;
+    font-weight: 500;
+    color: white;
+    font-size: 15px;
+    padding: 0 5px;
+    border-radius: 20px;
+    background-color: #46a094;
+    line-height: 40px;
+    box-shadow: 0 2px 5px #485d56a9;
+}
+.list .purchase{
+    flex: 2;
+    text-transform: capitalize;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.list p{
+    text-align: center;
+}
+.list .category{
+    flex: 1.5;
+}
+.list .date{
+    flex: 1.2;
+}
+.list .cost{
+    flex: 1 ;
+}
+.list button{
+    flex: 0.5;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s color;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.list button:hover{
+    color: rgb(179, 50, 50);
+}
+.h1{
+    font-size: 60px;
+}
+.statistics{
+    width: 45%;
+    padding-top: 100px;
+    float: right;
+}
+.statistics span{
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+}
+.statistics h6{
+    font-size: 30px;
+    font-weight: 700;
+    color: #46a094;
+}
+.statistics p{
+    font-size: 45px;
+    font-weight: 600;
+    color: rgb(41, 46, 39);
+}
+
+.chart{
+    width: 50%;
+    display: inline-block;
+}
+
+.createbudget{
+    padding-top: 20vh;
+    width: 50%;
+    margin: auto;
+}
+.createbudget h1{
+    color: #46a094;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+}
+.createbudget input{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    display: block;
+    font-size: 20px;
+    height: 30px;
+}
+.createbudget button{
+    color: white;
+    margin: auto;   
+    box-shadow: 0 1px 2px #485d56a9;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color: #46a094;
+    font-size: 20px;
+    border-radius: 15px;
+    width: 30%;
+    font-weight: 600;
+    padding: 7px 0;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+
+.createbudget button:hover{
+    background-color: #2abeaa;
+    box-shadow: 0 3px 3px #485d56a9;
+
+}
+
+
+@media screen and (max-width:1200px){
+    .create{
+        width: 70%;
+    }
+    .createbudget h1{
+        font-size: 30px;
+    }
+    .createbudget input{
+        font-size: 15px;
+    }
+    .createbudget button{
+        font-size: 15px;
+        padding: 5px 0;
+    }
+    .parent{
+        width: 90%;
+    }
+    .statistics h6{
+        font-size: 24px;
+    }
+    .statistics p{
+        font-size: 30px;
+    }
+    .create h5{
+        font-size: 25px;
+    }
+    .create div label{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .parent{
+        width: 100%;
+    }
+    .statistics h6{
+        font-size: 20px;
+    }
+    .statistics p{
+        font-size: 25px;
+    }
+    .create div label{
+        font-size: 14px;
+    }
+    .create input,.create select{
+        width: 50%;
+        font-size: 11px;
+        height: 15px;
+    }
+    .create button{
+        font-size: 12px;
+        padding: 5px 15px;
+        border-radius: 7px;
+    }
+    .create h5{
+        font-size: 20px;
+    }
+    .create{
+        border-radius: 15px;
+        padding: 15px;
+        width: 95%;
+        margin-bottom: 20px;
+        padding-bottom: 35px;
+        box-shadow: 0 7px 7px  #5f7a77b8;
+
+    }
+    .list{
+        width: 95%;
+        font-size: 11px;
+        padding: 0;
+        line-height: 25px;
+        height: 25px;
+    }
+
+    .list .purchase{
+        padding-left: 5px;
+    }
+    .list button{
+        font-size: 11px;
+    }
+    .statistics{
+        padding-top: 0;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .statistics span{
+        width: 50%;
+    }   
+    .chart{
+        width: 100%;
+    }
+    .pie-chart{
+        margin: auto;
+    }
+
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+    }
+    .createbudget{
+        width: 95%;
+    }
+    .createbudget h1{
+        font-size: 20px;
+    }
+    .createbudget input{
+        font-size: 12px;
+    }
+    .createbudget button{
+        font-size: 12px;
+        width: 40%;
+    }
+
+}
+
+
 

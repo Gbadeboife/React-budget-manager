@@ -3,7 +3,7 @@ import Tablelist from "./Tablelist";
 import Createpurchase from "./Createpurchase";
 import Stats from "./Stats";
 import {v4 as uuid} from 'uuid'
-import "./css/Parent.css"
+import "../App.css"
 import Chart from "./Chart";
 
 function Parent({budget}){
@@ -36,29 +36,27 @@ function Parent({budget}){
       if(category=='Housing'){
     setHousing((prevState)=>[
       ...prevState,parseFloat(cost)
-    ]);
-    
-  }  else if(category=='Food') {
-    setFood((prevState)=>[
-      ...prevState,parseFloat(cost)
-    ])
-  } else if(category=='Transportation') {
-    setTransport((prevState)=>[
-      ...prevState,parseFloat(cost)
-    ])
-  } else if(category=='Utilities') {
-    setUtilities((prevState)=>[
-      ...prevState,parseFloat(cost)
-    ])
-  } else if(category=='Medical') {
-    setMedical((prevState)=>[
-      ...prevState,parseFloat(cost)
-    ])
-  } else {
-    setPersonal((prevState)=>[
-      ...prevState,parseFloat(cost)
-    ])
-  };}
+    ])} else if (category=='Food') {
+      setFood((prevState)=>[
+        ...prevState,parseFloat(cost)
+      ])
+    } else if(category=='Transportation') {
+      setTransport((prevState)=>[
+        ...prevState,parseFloat(cost)
+      ])
+    } else if(category=='Utilities') {
+      setUtilities((prevState)=>[
+        ...prevState,parseFloat(cost)
+      ])
+    } else if(category=='Medical') {
+      setMedical((prevState)=>[
+        ...prevState,parseFloat(cost)
+      ])
+    } else {
+      setPersonal((prevState)=>[
+        ...prevState,parseFloat(cost)
+      ])
+    };}
 
     const savePurchase=()=>{
       setPurchases((prevState)=>[...prevState,{
@@ -78,10 +76,6 @@ function Parent({budget}){
       saveCost()
     }
 
-
-
-
-    
 
     useEffect(()=>{
         const totalArray=purchases.map((item)=>{
@@ -146,27 +140,29 @@ function Parent({budget}){
       setPurchases(filteredPurchases)
     }
     useEffect(()=>{
-      const data=JSON.parse(localStorage.getItem('Purchases'))
-      setPurchases(data)
+      setPurchases(JSON.parse(localStorage.getItem('Purchases')))
     },[])
     useEffect(()=>{
       localStorage.setItem('Purchases',JSON.stringify(purchases))
+
     },[purchases])
 
 
 
-
     return(
-        <div>
+        <div className="parent">
           <div className="dashboard">
-            <div className="chart"><Chart data={chartData}/>
-          </div>
-          <Stats spent={spent} budget={budget}/>
+            <div className="chart">
+              <Chart data={chartData}/>
+            </div>
+            <Stats spent={spent} budget={budget}/>
           </div>       
-          {purchases.map((row)=>(
-            <Tablelist purchase={row.purchase} key={row.key} category={row.category} date={row.date} cost={row.cost} del={deletePurchase} id={row.id}/>
-          ))}
+
         <Createpurchase save={savePurchase} pur={_purchase} categ={_category} cost={_cost}  update={updateValues}/>
+
+        {purchases.map((row)=>(
+            <Tablelist purchase={row.purchase} key={row.key} category={row.category} date={row.date} cost={row.cost} del={deletePurchase} id={row.id}/>
+        ))}
         </div>
     )
 }

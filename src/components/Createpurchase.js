@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{ useState } from 'react'
 
 
 function Createpurchase({save,pur,categ,cost,update}){
+
     return(
         <div className='create'>
             <h5>New Purchase</h5>
@@ -11,7 +12,8 @@ function Createpurchase({save,pur,categ,cost,update}){
             </div>
             <div>
                 <label>Category</label>
-                <select onChange={categ} value={update.categ}>                    
+                <select onChange={categ} value={update.categ}> 
+                    <option selected style={{display:'none'}}></option>                   
                     <option>Housing</option>
                     <option>Food</option>
                     <option>Transportation</option>
@@ -25,7 +27,11 @@ function Createpurchase({save,pur,categ,cost,update}){
                 <label >Cost</label>
                 <input type="number" onChange={cost} value={update.cost}/>
             </div>
-            <button onClick={save}>save</button>
+            {update.pur && update.categ && update.cost?
+                <button onClick={save}>Save Purchase</button>
+                :
+                null
+            }
         </div>
     )
 }
