@@ -144,7 +144,6 @@ function Parent({budget}){
     },[])
     useEffect(()=>{
       localStorage.setItem('Purchases',JSON.stringify(purchases))
-
     },[purchases])
 
 
@@ -158,11 +157,26 @@ function Parent({budget}){
             <Stats spent={spent} budget={budget}/>
           </div>       
 
-        <Createpurchase save={savePurchase} pur={_purchase} categ={_category} cost={_cost}  update={updateValues}/>
+          <Createpurchase save={savePurchase} pur={_purchase} categ={_category} cost={_cost}  update={updateValues}/>
 
-        {purchases.map((row)=>(
-            <Tablelist purchase={row.purchase} key={row.key} category={row.category} date={row.date} cost={row.cost} del={deletePurchase} id={row.id}/>
-        ))}
+          {
+            purchases.length !== 0 ? (
+              purchases.map((row) => (
+                <Tablelist 
+                  purchase={row.purchase}
+                  key={row.id} 
+                  category={row.category}
+                  date={row.date}
+                  cost={row.cost}
+                  del={deletePurchase}
+                  id={row.id}
+                />
+              ))
+            ) : 
+              null  
+            
+          }
+
         </div>
     )
 }
